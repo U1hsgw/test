@@ -1,0 +1,126 @@
+*{
+    /*「＊」→このファイル全体に反映させる*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image: url("./images/background2.jpg");
+    background-size:cover;
+    background-color:rgba(116, 108, 108, 0.6);
+	background-blend-mode:darken;
+    background-attachment: fixed;
+    background-position: 0% 20%;
+
+}   
+
+.main{
+    /*画面全体のおはなし*/
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(to left, rgb(37, 132, 50), rgb(119, 188, 121));
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    width: 80%;
+    /*タイトルの横に来てほしい*/
+    display:flex;
+    z-index:1;
+    /*上の余白をいい感じに*/
+    margin:30px auto;
+    position:sticky;
+    /*タイトルと文字列たちを垂直方向に中央揃え*/
+    align-items:center;
+    font-weight:550;
+    
+}
+
+.logo-area{
+    /*ロゴの大きさ*/
+    flex-basis:20%;
+    /*ロゴとタイトルを横並びにする*/
+    display:flex;
+    /*ロゴとタイトルを中央揃え*/
+    align-items: center;
+}
+
+.logo{
+    /*ロゴの大きさと余白の調整*/
+    width:25%;
+    height:25%;
+    /*右に余白*/
+    margin-right:10px;
+}
+
+
+
+.nav-links{
+    /*右寄せ*/    
+    flex:1;
+    text-align: right;
+}
+
+.nav-links ul {
+    /*黒ドットをなくす*/
+    list-style: none;
+}
+
+.nav-links ul li{
+    /*横一列に整列*/
+    display: inline-block;
+    /*文字間の調整*/
+    padding: 0 3rem;
+}
+
+.nav-links ul a{
+    font-weight:600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links ul a:hover{
+    color: rgb(241, 246, 98, 0.799);
+}
+
+
+
+.search{
+    text-align: center;
+    margin:60px 455px;
+    padding: 70px;;
+    width: 400px;
+    height:100px;
+}
+
+
+
+button{
+    text-align: center;
+    margin:0 555px;
+    width: 200px;
+    height:56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    background-color: rgb(68, 172, 71);
+    border-radius: 3em;
+
+}
+
+button:hover{
+    background-color: rgb(13, 116, 30);
+    transition: 0.3s;
+
+}
+
+
+
+
+
+

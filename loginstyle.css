@@ -1,0 +1,144 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("./images/loginavocado.jpg");
+    background-position: 0% 20%;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.logo-area{
+    position:absolute;
+    top:15px;
+    left:100px;
+    /*ロゴの大きさ*/
+    width:300px;
+    /*ロゴとタイトルを横並びにする*/
+    display:flex;
+    /*ロゴとタイトルを中央揃え*/
+    align-items: center;
+}
+
+
+.logo{
+    /*ロゴの大きさと余白の調整*/
+    width:25%;
+    height:25%;
+    /*右に余白*/
+    margin-right:10px;
+}
+h1{
+    color:black;
+    font-weight:bolder;
+}
+.loginbox{
+    width: 300px;
+    padding: 40px;
+    position:absolute;
+    top: 55%;
+    left:20%;
+    transform: translate(-50%,-50%);
+    background: rgba(119, 188, 121);
+    text-align: center;
+    box-shadow: 13px 13px 20px rgba(0,0,0,0.18);
+    border-radius: 10%;
+}
+
+.loginbox input[type="text"]{
+background:none;
+display:block;
+margin:20px auto;
+text-align: center;
+border: 2px solid black;
+padding: 14px 10px;
+width:200px;
+outline:none;
+color:black;
+border-radius: 24px;
+transition:0.25s;
+
+}
+
+.loginbox input[type="password"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:200px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition:0.25s;
+}
+
+.loginbox input[type="submit"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:100px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition:0.25s;
+}    
+
+.loginbox input[type="text"]:focus{
+    width:280px;
+    border-color: rgb(13, 116, 30);
+}
+
+.loginbox input[type="password"]:focus{
+    width:280px;
+    border-color: rgb(13, 116, 30);
+
+}
+.loginbox input[type="submit"]:hover{
+    background-color: rgb(13, 116, 30);
+}
+    
+.arrow_box{
+    position:relative;
+    top:150px;
+    left:850px;
+    width:200px;
+    height:40px;
+    background:#d1ec80;
+    padding:50px;
+    text-align:center;
+    color:#333333;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    box-shadow: 13px 13px 20px rgba(0,0,0,0.18);
+
+}
+.arrow_box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(174, 230, 167, 0);
+    border-top-width:10px;
+    border-bottom-width:10px;
+    border-left-width:23px;
+    border-right-width:23px;
+    margin-top: -10px;
+    border-right-color:#d1ec80;
+    right:100%;
+    top:73%;
+}
+
+.resultbox{
+    display: none;
+}

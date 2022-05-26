@@ -1,0 +1,120 @@
+*{
+    /*「＊」→このファイル全体に反映させる*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: rgb(141, 138, 138);
+}
+
+.main{
+    /*画面全体のおはなし*/
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 20vh;
+    background: linear-gradient(to left, rgb(37, 132, 50), rgb(119, 188, 121));
+    overflow: hidden;
+    position: relative;
+}
+
+nav{
+    width: 80%;
+    /*タイトルの横に来てほしい*/
+    display:flex;
+    z-index:1;
+    /*上の余白をいい感じに*/
+    margin:30px auto;
+    position:sticky;
+    /*タイトルと文字列たちを垂直方向に中央揃え*/
+    align-items:center;
+    font-weight:550;
+    
+}
+
+.logo-area{
+    /*ロゴの大きさ*/
+    flex-basis:20%;
+    /*ロゴとタイトルを横並びにする*/
+    display:flex;
+    /*ロゴとタイトルを中央揃え*/
+    align-items: center;
+}
+
+.logo{
+    /*ロゴの大きさと余白の調整*/
+    width:25%;
+    height:25%;
+    /*右に余白*/
+    margin-right:10px;
+}
+
+
+
+.nav-links{
+    /*右寄せ*/    
+    flex:1;
+    text-align: right;
+}
+
+.nav-links ul {
+    /*黒ドットをなくす*/
+    list-style: none;
+}
+
+.nav-links ul li{
+    /*横一列に整列*/
+    display: inline-block;
+    /*文字間の調整*/
+    padding: 0 3rem;
+}
+
+.nav-links ul a{
+    /*上のタブの色*/
+    font-weight:600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links ul a:hover{
+    /*カーソルを合わせるとふわっと色が変わる*/
+    color: rgba(241, 246, 98, 0.799);
+}
+
+
+.topic{
+    /*画面上のタイトルの位置*/
+    text-align: center;
+    padding:30px 0px;
+    color:white;
+    margin:1%;
+}
+
+.one{
+    position:absolute;
+    top:40%;
+    left:12%;
+    color:black;
+}
+
+.two{
+    position:absolute;
+    top:40%;
+    left:43%;
+    color:black;
+
+}
+
+.three{
+    position:absolute;
+    top:40%;
+    left:75%;
+    color:black;
+
+}
+
+
+
+

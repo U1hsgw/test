@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <link rel="stylesheet" href="chartstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+               
+        .chartCard{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .chartBox{
+            width: 400px;
+            padding:30px;
+            margin:2%;
+            border-radius: 20px;
+            box-shadow: 10px 10px  rgba(0,0,0,0.18);
+            background-color: white;
+        }
+    </style> 
+    
+</head>
+  <body>
+    <div class="main">
+        <nav>
+            <div class="logo-area">
+                <img src="./images/abocadologo.png" class="logo" />
+                <h2>Adgavo</h2>
+
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <a href="http://127.0.0.1:5500/home.html"><li>Home</li></a>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Analyze</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    
+    <div class="topic">
+        <h1>Result of "Coca Cola"</h1>
+        <h2 class="one">Age Group</h2>
+        <h2 class="two">Monthly Views</h2>
+        <h2 class="three">Gender Percentage</h2>
+    </div>
+<div class="chartCard">
+    <div class="chartBox">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div class="chartBox">
+        <canvas id="myChartLine"></canvas>
+    </div>
+    <div class="chartBox">
+        <canvas id="myChartDoughnut"></canvas>
+    </div>
+
+<script>
+    const data ={
+        labels:['~20','20~30','30~40','40~'],
+        datasets:[{
+            label:'Viewer Age Group',
+            data:[3,0,0,0],
+            backgroundColor: [
+                "#49A9EA", 
+                ],
+            borderWidth:1
+        },{
+            label:'Creator Age Group',
+            data:[4,0,0,0],
+            backgroundColor: [
+                
+                "#ed738c"],
+            borderWidth:1
+        }]
+    };
+
+    const config={
+        type:'bar',
+        data,
+        options:{
+            aspectRatio:1,
+            scales:{
+                y:{
+                    beginAtZero:true
+                }
+            }
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const dataLine ={
+        labels:['February','March','April','May'],
+        datasets:[{
+            label:'Monthly Views',
+            data:[0,0,0,3],
+            backgroundColor: [
+            "#36CAAB", ],
+            borderColor:["#36CAAB",],
+                
+            borderWidth:1
+        }]
+    };
+
+    const configLine={
+        type:'line',
+        data:dataLine,
+        options:{
+            aspectRatio:1,
+            scales:{
+                y:{
+                    beginAtZero:true
+                }
+            }
+        }
+    };
+
+    const myChartLine = new Chart(
+        document.getElementById('myChartLine'),
+        configLine
+    );
+
+    const dataDoughnut ={
+        labels:['Male','female','other'],
+        datasets:[{
+            label:'Gender Percentage',
+            data:[40,40,20],
+            backgroundColor: [
+                "#49A9EA", 
+                "#ed738c",
+                "#e8d82c",
+                ],
+            borderWidth:1
+        }]
+    };
+
+    const configDoughnut={
+        type:'doughnut',
+        data:dataDoughnut,
+        options:{
+            
+        }
+    };
+
+    const myChartDoughnut = new Chart(
+        document.getElementById('myChartDoughnut'),
+        configDoughnut
+    );
+
+</script>
+</div>
+
+<!--  <script src="app.js"></script>  -->  
+
+</body>
+</html>
